@@ -1,0 +1,9 @@
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\bin\Debug\EmployeeOnVacation.exe.config
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\bin\Debug\EmployeeOnVacation.exe
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\bin\Debug\EmployeeOnVacation.pdb
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.csprojResolveAssemblyReference.cache
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.MainForm.resources
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.Properties.Resources.resources
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.csproj.GenerateResource.Cache
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.exe
+D:\Учеба\5 курс\ИИСП\EmployeeOnVacation\EmployeeOnVacation\obj\Debug\EmployeeOnVacation.pdb
