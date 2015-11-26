@@ -8,5 +8,6 @@ namespace EmployeeOnVacation
         DateTime DateEndVocation { get; set; }
         Employee EmployeeOnVacation { get; set; }
         string Description { get; set; }
+        double GetMoneyVacation();
     }
 }
