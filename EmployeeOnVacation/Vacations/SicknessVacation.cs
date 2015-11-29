@@ -1,60 +1,30 @@
-﻿namespace EmployeeOnVacation
+﻿using System;
+using System.Collections.Generic;
+using EmployeeOnVacation.Vacations;
+
+namespace EmployeeOnVacation
 {
-    public class SicknessVacation:IVacation
+    public class SicknessVacation : Vacation
     {
-         string SickList { get; set; }
+        public string SickList { get; private set; }
+   
+        public SicknessVacation(string name,Employee employee, DateTime dateStartVacation, DateTime dateEndVacation, string description, string sickList)
+        {
+            EmployeeOnVacation = employee;
+            DateEndVacation = dateEndVacation;
+            DateStartVacation = dateStartVacation;
+            Description = description;
+            SickList = sickList;
+            Name = name;
+        }
 
-         public System.DateTime DateStartVocation
-         {
-             get
-             {
-                 throw new System.NotImplementedException();
-             }
-             set
-             {
-                 throw new System.NotImplementedException();
-             }
-         }
+        public override double GetMoneyVacation()
+        {
+            TimeSpan ts = DateEndVacation - DateStartVacation;
+            int day = ts.Days;
+            return day * 250000;
+        }
 
-         public System.DateTime DateEndVocation
-         {
-             get
-             {
-                 throw new System.NotImplementedException();
-             }
-             set
-             {
-                 throw new System.NotImplementedException();
-             }
-         }
 
-         public Employee EmployeeOnVacation
-         {
-             get
-             {
-                 throw new System.NotImplementedException();
-             }
-             set
-             {
-                 throw new System.NotImplementedException();
-             }
-         }
-
-         public string Description
-         {
-             get
-             {
-                 throw new System.NotImplementedException();
-             }
-             set
-             {
-                 throw new System.NotImplementedException();
-             }
-         }
-
-         public double GetMoneyVacation()
-         {
-             throw new System.NotImplementedException();
-         }
     }
 }

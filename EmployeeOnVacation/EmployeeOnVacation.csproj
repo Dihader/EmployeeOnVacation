@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="Vacations\Vacation.cs" />
+    <Compile Include="Vacations\VacationRepository.cs" />
     <Compile Include="Vacations\EducationalVacation.cs" />
     <Compile Include="Vacations\RegularVacation.cs" />
     <Compile Include="Vacations\SicknessVacation.cs" />

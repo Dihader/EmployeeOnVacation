@@ -1,59 +1,25 @@
-﻿namespace EmployeeOnVacation
+﻿using System;
+using EmployeeOnVacation.Vacations;
+
+namespace EmployeeOnVacation
 {
-    public class EducationalVacation : IVacation
+    public class EducationalVacation : Vacation
     {
-
-        public System.DateTime DateStartVocation
+        public EducationalVacation(string name, Employee employee, DateTime dateStartVacation, DateTime dateEndVacation, string description)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
+            EmployeeOnVacation = employee;
+            DateEndVacation = dateEndVacation;
+            DateStartVacation = dateStartVacation;
+            Description = description;
+            Name = name;
         }
 
-        public System.DateTime DateEndVocation
+        public override double GetMoneyVacation()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
+            TimeSpan ts = DateEndVacation - DateStartVacation;
+            int day = ts.Days;
+            return day * 250000;
         }
-
-        public Employee EmployeeOnVacation
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-
-        public string Description
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-
-        public double GetMoneyVacation()
-        {
-            throw new System.NotImplementedException();
-        }
+       
     }
 }

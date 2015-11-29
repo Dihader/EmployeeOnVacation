@@ -1,60 +1,26 @@
-﻿namespace EmployeeOnVacation
+﻿using System;
+using EmployeeOnVacation.Vacations;
+
+namespace EmployeeOnVacation
 {
-    public class RegularVacation : IVacation
+    public class RegularVacation : Vacation
     {
-        public System.DateTime DateStartVocation
+        public bool IsConfirmed { get; set; }
+        public RegularVacation(string name, Employee employee, DateTime dateStartVacation, DateTime dateEndVacation, string description, bool isConfirmed)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
+            EmployeeOnVacation = employee;
+            DateEndVacation = dateEndVacation;
+            DateStartVacation = dateStartVacation;
+            Description = description;
+            Name = name;
+            IsConfirmed = isConfirmed;
         }
 
-        public System.DateTime DateEndVocation
+        public override double GetMoneyVacation()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-
-        public Employee EmployeeOnVacation
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-
-        public string Description
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-
-        private bool IsConfirmed { get; set; }
-        
-        public double GetMoneyVacation()
-        {
-            throw new System.NotImplementedException();
+            TimeSpan ts = DateEndVacation - DateStartVacation;
+            int day = ts.Days;
+            return day * (EmployeeRepository.GetAvgSalary() / 30);
         }
     }
 }
